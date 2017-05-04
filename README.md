@@ -9,6 +9,7 @@
 [image5]: ./output_images/warp_transformation.png "Before flipping"
 [image6]: ./output_images/centroid_img.png "Shadowed image"
 [image7]: ./output_images/final_transform.png "Shadowed image"
+[image8]: ./output_images/video.png "Shadowed image"
 
 ---
 In this project I will build a lane detecting pipeline to detect lane on the load. 
@@ -87,8 +88,6 @@ Restore Original image with the area inside the lane are colored.
 ![alt text][image7]
 
 
-
-
-<video width="960" height="540" controls>
-  <source src="./first_try.mp4">
-</video>
+Final Video. 
+---
+[![alt text][image8]](https://youtu.be/9ckFDHfKdqU)
