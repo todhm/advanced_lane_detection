@@ -7,7 +7,7 @@
 [image3]: ./output_images/img_threshold.png "Before flipping"
 [image4]: ./output_images/src_dst.png "Before flipping"
 [image5]: ./output_images/warp_transformation.png "Before flipping"
-[image6]: ./output_images/transformed_img.png "Shadowed image"
+[image6]: ./output_images/centroid_img.png "Shadowed image"
 [image7]: ./output_images/final_transform.png "Shadowed image"
 
 ---
