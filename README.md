@@ -91,3 +91,10 @@ Restore Original image with the area inside the lane are colored.
 Final Video. 
 ---
 [![alt text][image8]](https://youtu.be/9ckFDHfKdqU)
+
+
+Final Discussion. 
+---
+* It took much time to finish off this project. 
+* The main Problem I had was to use to small x and y point to fit the line. 
+* The sanity check also have crucial role to finish off this project. 
