@@ -10,6 +10,7 @@
 [image6]: ./output_images/centroid_img.png "Shadowed image"
 [image7]: ./output_images/final_transform.png "Shadowed image"
 [image8]: ./output_images/video.png "Shadowed image"
+[image9]: ./output_images/augment_img.png "Shadowed image"
 
 ---
 In this project I will build a lane detecting pipeline to detect lane on the load. 
@@ -40,6 +41,11 @@ Camera Calibration
 
 ![alt text][image2]
 
+Augment Data
+---
+* To make more robust lane detecting on various condition adjust brightness and shadows to make more road images. 
+![alt text][image9]
+
 Threshold Detection.
 ---
 * Based on gradient & color space conversion technique we convert undistorted image to binary image. 
@@ -65,10 +71,9 @@ Perspective transform.
 
 Locate lane lines and fit polynomial by sliding window from image. 
 ---
-* (1) Divide the image area by pre-defined window size. 
-* (2) As we slide the window by each level find the point where value of linear convolution between vertical slice of image in the window and window_width vector become maximized. 
-* (3) From the centroids point we calculate the y_point value on each side of lane.
-* (4) With these x and y point we can fit 2nd polynomial by on left and right lane. 
+* (1) Find the Base line x point by finding strongest signed on binary warp image. 
+* (2) Divide the image area by pre-defined window size. 
+* (3) As we slide upward Find the points located inside the pre-defind margin. 
 
 ![alt text][image6]
 
@@ -81,20 +86,19 @@ Determine the curvature of the lane and vehicle position with respect to center.
 Restore Original image with the area inside the lane are colored. 
 ---
 * From the Functions from previous steps construct final pipeline
-* When the lane detection didn't meet two specific condition we using detected lane in beforehand. 
-    * (1) When  minimum value radius of left and right curve smaller than 1000 and absoulte value of it's difference is higher than 1000. (It means radius show great difference although the lanes were not straight.
-    * (2) When maximum distance between right x value and left x value exeed 850
-    
+* When the lane detection didn't meet two specific condition we using average of former 10 lines in beforehand. 
+    * (1) When radius of curvature of new lane is not greater than 100 times former lane line and also not smaller than 0.01 times former lane. . 
+    * (2) When maximum distance between pixel value of base x points less than 10.
 ![alt text][image7]
 
 
 Final Video. 
 ---
-[![alt text][image8]](https://youtu.be/9ckFDHfKdqU)
+[![alt text][image8]](https://youtu.be/9cCetfGwfew)
 
 
 Final Discussion. 
 ---
 * It took much time to finish off this project. 
 * The main Problem I had was to use to small x and y point to fit the line. 
-* The sanity check also have crucial role to finish off this project. 
+* The sanity check also have crucial role to finish off this project.
