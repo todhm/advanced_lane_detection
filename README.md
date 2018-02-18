@@ -9,7 +9,7 @@
 [image5]: ./output_images/warp_transformation.png "Before flipping"
 [image6]: ./output_images/centroid_img.png "Shadowed image"
 [image7]: ./output_images/final_transform.png "Shadowed image"
-[image8]: ./output_images/video.png "Shadowed image"
+[image8]: ./output_images/videoimg.png "Shadowed image"
 [image9]: ./output_images/augment_img.png "Shadowed image"
 
 ---
@@ -94,7 +94,7 @@ Restore Original image with the area inside the lane are colored.
 
 Final Video. 
 ---
-![alt text][image8](https://youtu.be/9cCetfGwfew)
+[![alt text](image8)](https://youtu.be/9cCetfGwfew)
 
 
 Final Discussion. 
