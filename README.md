@@ -94,7 +94,7 @@ Restore Original image with the area inside the lane are colored.
 
 Final Video. 
 ---
-[![alt text](image8)](https://youtu.be/9cCetfGwfew)
+[![alt text][image8]](https://youtu.be/9cCetfGwfew)
 
 
 Final Discussion. 
